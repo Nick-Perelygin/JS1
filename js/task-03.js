@@ -13,19 +13,15 @@ const images = [
   },
 ];
 
+
+
 const galleryUl = document.querySelector('.gallery');
+const gallery = images
 
 const imagesGallery = images.map(option => {
-  const elements = document.createElement('img');
-  elements.classList.add('image');
-  elements.width = 640;
-  elements.src = option.url;
-  elements.alt = option.alt;
-  const elementsLi = document.createElement('li');
-  elementsLi.appendChild(elements);
-  return elementsLi
+  galleryUl.innerHTML += `<li><img class="image" src="${option.url}" alt="${option.alt}" width = 640></li>`;
 })
 
 for (let i = 0; i <= imagesGallery.length; i += 1){
-galleryUl.insertAdjacentHTML('afterbegin', imagesGallery[i].outerHTML)
+  console.log(galleryUl.insertAdjacentHTML('afterbegin', imagesGallery[i].outerHTML))
 }

@@ -41,4 +41,3 @@ buttonCreateEl.addEventListener('click', () => {
 buttonDestroyEl.addEventListener('click', () => {
 divBoxesEl.innerHTML = "";
 })
-
